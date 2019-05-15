@@ -1,3 +1,5 @@
+import random
+
 STEVILO_DOVOLJENIH_NAPAK = 10
 PRAVILNA_CRKA = '+'
 PONOVLJENA_CRKA = 'O'
@@ -64,25 +66,34 @@ class Igra:
                 return NAPACNA_CRKA
 
 
-testno_geslo = 'požrtvovalnost'.upper()
-testne_crke = ['A', 'E', 'O', 'P']
-igra = Igra(testno_geslo, testne_crke)
-print(igra.napacne_crke())
-print(igra.pravilne_crke())
-print(igra.stevilo_napak())
-print(igra.zmaga())
-print(igra.poraz())
-print(igra.pravilni_del_gesla())
-print(igra.nepravilni_ugibi())
-print(' ')
+def nova_igra():
+    return Igra(random.choice(bazen_besed))
 
-zmagovalne_crke = [x for x in testno_geslo]
-zmagna_igra = Igra(testno_geslo, zmagovalne_crke)
-print(zmagna_igra.zmaga())
-print(zmagna_igra.poraz())
-print(zmagna_igra.pravilni_del_gesla())
-print(' ')
+# testno_geslo = 'požrtvovalnost'.upper()
+# testne_crke = ['A', 'E', 'O', 'P']
+# igra = Igra(testno_geslo, testne_crke)
+# print(igra.napacne_crke())
+# print(igra.pravilne_crke())
+# print(igra.stevilo_napak())
+# print(igra.zmaga())
+# print(igra.poraz())
+# print(igra.pravilni_del_gesla())
+# print(igra.nepravilni_ugibi())
+# print(' ')
 
-poskus = igra.ugibaj('r')
-print(poskus)
-print(igra.pravilni_del_gesla())
+# zmagovalne_crke = [x for x in testno_geslo]
+# zmagna_igra = Igra(testno_geslo, zmagovalne_crke)
+# print(zmagna_igra.zmaga())
+# print(zmagna_igra.poraz())
+# print(zmagna_igra.pravilni_del_gesla())
+# print(' ')
+
+# poskus = igra.ugibaj('r')
+# print(poskus)
+# print(igra.pravilni_del_gesla())
+
+with open('u:\\UVOD V PROGRAMIRANJE\\9. Repozitorij\\vislice\\besede.txt', 'r', encoding = 'utf-8') as datoteka_z_besedami:
+    bazen_besed = [vrstica.strip().upper() for vrstica in datoteka_z_besedami]
+
+#originalno smo napisali samo with open('besede.txt', ...), pa ni delalo. Zato smo potem
+# napisali celo pot do te datoteke in je delalo (nekaterim je že prej)
