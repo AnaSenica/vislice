@@ -7,7 +7,7 @@
 
   <blockquote>
     Vislice so najboljša igra za preganjanje dolgčasa (poleg tetrisa).
-    <small>Študentje</small>
+    <small>Kao kao</small>
   </blockquote>
 
   <img src="img/10.jpg" alt="obesanje">
