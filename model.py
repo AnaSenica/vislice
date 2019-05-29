@@ -67,14 +67,14 @@ class Igra:
             else:
                 return NAPACNA_CRKA
 
-with open('u:\\UVOD V PROGRAMIRANJE\\9. Repozitorij\\vislice\\besede.txt', 'r', encoding = 'utf-8') as datoteka_z_besedami:
-    bazen_besed = [vrstica.strip().upper() for vrstica in datoteka_z_besedami]
+#with open('u:\\UVOD V PROGRAMIRANJE\\9. Repozitorij\\vislice\\besede.txt', 'r', encoding = 'utf-8') as datoteka_z_besedami:
+#    bazen_besed = [vrstica.strip().upper() for vrstica in datoteka_z_besedami]
 
 #originalno smo napisali samo with open('besede.txt', ...), pa ni delalo. Zato smo potem
 # napisali celo pot do te datoteke in je delalo (nekaterim je že prej)
 
-def nova_igra():
-    return Igra(random.choice(bazen_besed))
+#def nova_igra():
+#    return Igra(random.choice(bazen_besed))
 
 class Vislice:
 
